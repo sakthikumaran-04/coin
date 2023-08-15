@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOSS IT!</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="container">
+        <div id="wrapper">
+    <h1>Toss Time!</h1>
+    <span id="head">head:</span><span id="tail">Tail:</span>
+    <div id="output">Toss!</div>
+    <button onclick="generate()">Generate</button>
+    <button onclick="reset()">Reset</button>
+    <!--<img src="coin.png"/></div>-->
+    </div>
+
+
+
+
+
+    <!--------------------------script--------------------------------------->
+    <script>
+        var h=parseInt(0);
+        var t=parseInt(0);
+        function generate(){
+        var a=Math.round(Math.random());
+        if(a<=0.5){
+            b="Heads";
+            h=h+1;
+            document.getElementById('output').innerHTML=b;
+            document.getElementById('head').innerHTML="Heads:"+h;
+        }
+        else{
+            b="Tails";
+            t=t+1;
+        document.getElementById('output').innerHTML=b;
+        document.getElementById('tail').innerHTML="Tails:"+t;
+        }
+    }
+        function reset(){
+        document.getElementById('output').innerHTML="Toss!";
+        h=0;
+        t=0;
+        document.getElementById('tail').innerHTML="Tails:"+t;
+        document.getElementById('head').innerHTML="Heads:"+h;
+        }
+    </script>
+</body>
+</html>
